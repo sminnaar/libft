@@ -6,11 +6,11 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:38:31 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/19 14:38:33 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/20 16:44:21 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "libft.h"
 
 void	ft_putnbr(int nbr)
 {

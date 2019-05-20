@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:56:54 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/20 12:36:09 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/20 17:04:04 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 unsigned long	ft_strlen(const char *s)
 {
-		unsigned long i;
+	unsigned long i;
 
-		i = 0;
-		while (s[i] != '\0')
-			i++;
-		return (i);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
