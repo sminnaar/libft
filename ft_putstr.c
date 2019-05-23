@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:38:40 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/20 16:52:44 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:10:50 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putstr(char const *s)
 	unsigned int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		ft_putchar(str[i]);
+		ft_putchar(s[i]);
 		i++;
 	}
 }

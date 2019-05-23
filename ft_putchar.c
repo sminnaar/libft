@@ -6,13 +6,21 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:37:47 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/21 10:12:33 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:00:41 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+//#include "libft.h"
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	main()
+{
+	ft_putchar(127);
+	ft_putchar('\n');
+	return (0);
 }

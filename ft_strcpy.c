@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:50:33 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/20 17:00:19 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:09:09 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	i = 0;
 	while (src[i] != dst[i])
 	{
-		dst[i] == src[i];
+		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';

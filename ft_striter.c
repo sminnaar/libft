@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:18:29 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/22 12:09:31 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/23 10:40:43 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/23 11:06:48 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	if ((c >= 'a' && c <= 'z'))
-		c -= 32;
-	return (c);
+	unsigned int i;
+
+	i =0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(s + i);
+		i++;
+	}
 }
