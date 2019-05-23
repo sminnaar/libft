@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:56:54 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/23 12:21:46 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/23 12:27:41 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/23 12:29:27 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_strlen(const char *s)
+int	ft_isupper(int c)
 {
-	unsigned long i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	return (c >= 'A' && c <= 'Z');
 }

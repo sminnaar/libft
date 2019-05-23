@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:20:31 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/23 10:47:46 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:32:06 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int				ft_isalnum(int c);
 int				ft_isalpha(int a);
 int				ft_isascii(int a);
 int				ft_isdigit(int d);
+int				ft_islower(int c);
 int				ft_isprint(int p);
+int				ft_isupper(int c);
 void			*ft_memset(void *b, int c, unsigned long len);
 void			ft_putchar(char c);
 void			ft_putnbr(int nbr);

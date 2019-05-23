@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:59:05 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/23 10:48:51 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:32:42 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int		ft_isalpha(int a)
 {
-	if ((a <= 'a' && a >= 'z') || (a <= 'A' && a >= 'Z'))
-		return (1);
-	else
-		return (0);
+	return (ft_isupper(a) || ft_islower(a));
 }

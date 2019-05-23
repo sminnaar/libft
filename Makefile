@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/23 11:08:14 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/05/23 12:43:54 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ SRC =	ft_atoi.c \
 		ft_isalpha.c \
 		ft_isascii.c \
 		ft_isdigit.c \
+		ft_islower.c \
 		ft_isprint.c \
+		ft_isupper.c \
 		ft_memset.c \
 		ft_putchar.c \
 		ft_putnbr.c \
