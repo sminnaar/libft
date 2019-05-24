@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/23 12:43:54 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/05/24 12:53:48 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,11 @@ SRC =	ft_atoi.c \
 		ft_strcmp.c \
 		ft_strcpy.c \
 		ft_strdup.c \
+		ft_strequ.c \
 		ft_striter.c \
 		ft_strlen.c \
+		ft_strncmp.c \
+		ft_strnequ.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
@@ -61,3 +64,9 @@ fclean: clean
 
 re: fclean all
 
+del: fclean
+	@rm -f libft.h.gch
+	@rm -f *.out
+
+c:
+	@gcc -v $(FLAG) main.c libft.a
