@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:33:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/24 13:24:47 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/24 14:42:59 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main()
 {
+	char s1[] = "Hello";
 	char s2[] = "Hello";
-	char s1[] = "Hel";
 
 	ft_putstr("Alpa:");
 	ft_putnbr(ft_isalpha('A'));
@@ -26,7 +26,7 @@ int	main()
 	ft_putnbr(ft_strnequ(s1, s2, 3));
 	ft_putchar('\n');
 	ft_putstr("Cmp:");	
-	ft_putnbr(ft_strcmp(s1, s2));
+	ft_putnbr(ft_strncmp(s1, s2, 3));
 	ft_putchar('\n');
 	ft_putstr("Equ:");
 	ft_putnbr(ft_strnequ(s1, s2, 3));
