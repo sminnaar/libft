@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/24 13:38:23 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/05/27 09:23:25 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC =	ft_atoi.c \
 		ft_strcmp.c \
 		ft_strcpy.c \
 		ft_strdup.c \
+		ft_strncpy.c \
 		ft_strequ.c \
 		ft_striter.c \
 		ft_strlen.c \

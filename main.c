@@ -15,9 +15,10 @@
 int	main()
 {
 	char s1[] = "Hello";
-	char s2[] = "Hello";
+	char s2[10];
 
-	ft_putstr("Alpa:");
+	ft_putstr(ft_strncpy(s2, s1, 3));
+	/*ft_putstr("Alpa:");
 	ft_putnbr(ft_isalpha('A'));
 	ft_putchar('\n');
 	ft_putnbr(42);//ft_strnequ(s1, s2, 3));
@@ -25,11 +26,11 @@ int	main()
 	ft_putstr("Equ:");
 	ft_putnbr(ft_strnequ(s1, s2, 3));
 	ft_putchar('\n');
-	ft_putstr("Cmp:");	
+	ft_putstr("Cmp:");
 	ft_putnbr(ft_strncmp(s1, s2, 3));
 	ft_putchar('\n');
 	ft_putstr("Equ:");
 	ft_putnbr(ft_strnequ(s1, s2, 3));
-	ft_putchar('\n');
+	ft_putchar('\n');*/
 	return (0);
 }
