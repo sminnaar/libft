@@ -14,7 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	if (!s1 || !s2)

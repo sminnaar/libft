@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:56:54 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/23 12:21:46 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/27 12:08:07 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/27 12:12:01 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_strlen(const char *s)
+char	*strrchr(const char *s, int c)
 {
 	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	i = ft_strlen(s);
+	while (i != s[0] || i != c)
+		i--;
+	if (s[i] = c)
+		return (*s[i]);
+	else
+		return (NULL);
 }
