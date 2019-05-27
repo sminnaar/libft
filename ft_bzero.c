@@ -6,13 +6,13 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:46:03 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/27 11:47:53 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/27 13:09:25 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, unsigned long n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

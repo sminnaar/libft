@@ -6,17 +6,17 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:38:03 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/20 17:07:19 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/27 16:50:15 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int out;
-	int pn;
-	int i;
+	int		out;
+	int		pn;
+	size_t	i;
 
 	out = 0;
 	pn = 1;

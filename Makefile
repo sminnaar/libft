@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/27 09:23:25 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/05/27 13:21:24 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ FLAG = -Wall -Wextra -Werror
 NAME = libft.a
 
 SRC =	ft_atoi.c \
+		ft_bzero.c \
+		ft_getchar.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -24,20 +26,24 @@ SRC =	ft_atoi.c \
 		ft_islower.c \
 		ft_isprint.c \
 		ft_isupper.c \
+		ft_itoa.c \
 		ft_memset.c \
 		ft_putchar.c \
 		ft_putnbr.c \
 		ft_putstr.c \
+		ft_strchr.c \
 		ft_strclr.c \
 		ft_strcmp.c \
 		ft_strcpy.c \
 		ft_strdup.c \
-		ft_strncpy.c \
 		ft_strequ.c \
 		ft_striter.c \
 		ft_strlen.c \
 		ft_strncmp.c \
+		ft_strncpy.c \
 		ft_strnequ.c \
+		ft_strrchr.c \
+		ft_striter.c \
 		ft_tolower.c \
 		ft_toupper.c \
 

@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:33:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/27 11:07:05 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:11:24 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main()
 	ft_putchar('\n');
 	ft_strclr(s1);
 	ft_putstr(s1);
+	ft_putchar('\n');
+	ft_strchr(s1, 'o');
 	/*ft_putstr("Alpa:");
 	ft_putnbr(ft_isalpha('A'));
 	ft_putchar('\n');

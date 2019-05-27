@@ -3,3 +3,5 @@
 *.swo
 *.[oa]
 *atom*
+utils/
+Libftest/
