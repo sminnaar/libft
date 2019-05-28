@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:38:03 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/28 09:44:27 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/28 09:47:56 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/28 11:25:36 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		out;
-	int		p_n;
-	size_t	i;
+	char *d;
+	char *s;
 
-	out = 0;
-	p_n = 1;
-	i = 0;
-	while ((nptr[i] >= 8 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == 43 || nptr[i] == 45)
-	{
-		if (nptr[i] == 45)
-			p_n = -1;
-		i++;
-	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		out = out * 10 + nptr[i] - 48;
-		i++;
-	}
-	return ((int)(out * p_n));
+	d = (char *)dst;
+	s = (char *)src;
+	while (n--)
+		*d++ = *s++;
+	return (dst);
 }
