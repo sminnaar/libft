@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:38:31 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/28 15:42:41 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/28 12:23:56 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/28 13:12:34 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nbr)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (nbr < 0)
+	size_t i;
+
+	if (src == NULL && dst == NULL)
+		return (NULL);
+	if (dst > src)
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
+		i = len;
+		while (i--)
+			*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 	}
-	else if (nbr > 10)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putchar(nbr % 10 + '0');
-	}
-	else
-		ft_putchar(nbr + '0');
+	else if (dst < src)
+		ft_memcpy(dst, src, len);
+	return (dst);
 }
