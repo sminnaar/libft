@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/29 12:34:46 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/05/29 13:27:54 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRC =	ft_atoi.c \
 		ft_strncmp.c \
 		ft_strncpy.c \
 		ft_strnequ.c \
+		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_strstr.c \
 		ft_striter.c \
