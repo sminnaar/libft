@@ -6,13 +6,13 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:52:27 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/29 14:00:39 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/31 08:05:55 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*st_strndup(const char *s, size_t n)
+char	*ft_strndup(const char *s, size_t n)
 {
 	char *str;
 

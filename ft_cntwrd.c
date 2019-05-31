@@ -6,13 +6,13 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:48:08 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/29 14:05:04 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/31 08:06:12 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_cntwrd(const char *s, char c)
+int	ft_cntwrd(const char *s, char c)
 {
 	size_t i;
 	size_t count;

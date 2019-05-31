@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:38:31 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/31 15:26:59 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/31 13:29:23 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/31 15:20:17 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nbr)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	if (nbr == -2147483648)
-		ft_putstr("-2147483648");
-	else if (nbr < 0)
+	char	*nstr;
+	size_t	i;
+	size_t	j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	nstr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!nstr)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
+		nstr[i] = s1[i];
+		i++;
 	}
-	else if (nbr > 10)
+	while (s2[j])
 	{
-		ft_putnbr(nbr / 10);
-		ft_putchar(nbr % 10 + '0');
+		nstr[i + j] = s2[j];
+		j++;
 	}
-	else
-		ft_putchar(nbr + '0');
+	nstr[i + j] = '\0';
+	return (nstr);
 }
