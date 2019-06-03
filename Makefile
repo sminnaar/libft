@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/05/31 15:32:10 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/03 15:49:46 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC =	ft_atoi.c \
 		ft_islower.c \
 		ft_isprint.c \
 		ft_isupper.c \
+		ft_iswht.c \
 		ft_itoa.c \
 		ft_memccpy.c \
 		ft_memalloc.c \
@@ -37,8 +38,13 @@ SRC =	ft_atoi.c \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_putchar.c \
+		ft_putchar_fd.c \
+		ft_putendl.c \
+		ft_putendl_fd.c \
 		ft_putnbr.c \
+		ft_putnbr_fd.c \
 		ft_putstr.c \
+		ft_putstr_fd.c \
 		ft_strcat.c \
 		ft_strchr.c \
 		ft_strclr.c \
@@ -66,6 +72,7 @@ SRC =	ft_atoi.c \
 		ft_strstr.c \
 		ft_strsub.c \
 		ft_striter.c \
+		ft_strtrim.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
