@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:40:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/05 12:58:02 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/05 13:30:29 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/05 13:42:47 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
-	size_t i;
+	t_list *new;
 
-	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i] != '\0')
+	if (!(new = (t_list *)ft_memalloc(sizeof(t_list) * 1)))
+		return (NULL);
+	if (content == NULL)
 	{
-		f(s + i);
-		i++;
+		new->content = NULL;
+		new->content_size = 0;
 	}
+	else
+	{
+		if (!(new->content = ft_memalloc(content_size)))
+			return (NULL);
+		ft_memmove(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

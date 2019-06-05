@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:38:40 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/31 15:29:30 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:49:26 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char const *s)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	if (!s)

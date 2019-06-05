@@ -6,13 +6,13 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:24:24 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/03 13:31:38 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/05 11:32:51 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iswht(c)
+int	ft_iswht(char c)
 {
 	return (c == 32 || (c >= 9 && c <= 13));
 }
