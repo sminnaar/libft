@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/06/06 16:00:11 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/06 16:15:09 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,7 @@ FLAG = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-SRC_DIR = srcs/
 OBJ_DIR = objs/
-INC_DIR = includes/
 
 SRC =	ft_atoi.c \
 		ft_bzero.c \
@@ -79,7 +77,6 @@ SRC =	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
-SRCS = $(addprefix $(SRC_DIR), $(SRC))
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
 all: $(NAME)
