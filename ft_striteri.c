@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:54:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/05 12:08:57 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:44:22 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	if (!s || !f)
 		return ;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		f(i, s + i);
 		i++;

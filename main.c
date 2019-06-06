@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:33:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/04 16:38:44 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/06 10:28:43 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main()
 	ft_putchar('\n');
 
 	//ft_isalnum Test
-	ft_putendl("2: ft_isalnum Test:");
+	ft_putendl("3: ft_isalnum Test:");
 	ft_putchar('\n');
 	ft_putchar('\t');
 	ft_putstr("Test1: ");
@@ -80,6 +80,17 @@ int	main()
 	ft_putnbr(ft_isalnum('$'));
 	ft_putchar('\n');
 
+	//ft_strcmp Test
+	ft_putendl("?: ft_strcmp Test:");
+	ft_putchar('\n');
+	ft_putchar('\t');
+	ft_putstr("Output: ");
+	ft_putnbr(ft_strcmp(atoi2, atoi3));
+	ft_putchar('\n');
+	ft_putchar('\t');
+	ft_putstr("Output: ");
+	ft_putnbr(ft_strcmp(atoi3, atoi2));
+	ft_putchar('\n');
 
 
 

@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:49:42 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/24 11:55:37 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:38:02 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
-
-	i = 0;
 	if (!s1 || !s2)
 		return (0);
 	while (*s1 && *s2 && *s1 == *s2)
