@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/06/05 14:33:55 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/06 14:13:43 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,10 @@
 FLAG = -Wall -Wextra -Werror
 
 NAME = libft.a
+
+SRC_DIR = srcs/
+OBJ_DIR = objs/
+INC_DIR = includes/
 
 SRC =	ft_atoi.c \
 		ft_bzero.c \
@@ -77,22 +81,28 @@ SRC =	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
-OBJ = $(SRC:.c=.o)
+SRCS = $(addprefix $(SRC_DIR), $(SRC))
+OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ_DIR) $(OBJ)
 	@echo "Object files created"
 	@ar rc $(NAME) $(OBJ)
 	@echo "$(NAME) Compiled"
 	@ranlib $(NAME)
 	@echo "$(NAME) Indexed"
 
-%.o: %.c
-	@gcc $(FLAG) -c $< -o $@
+$(OBJ_DIR) :
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(dir $(OBJ))
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@gcc $(FLAG) -c $< -o $@ -I $(INC_DIR)
 
 clean:
 	@rm -f $(OBJ)
+	@rm -rf $(OBJ_DIR)
 	@echo "$(OBJ) Cleaned"
 
 fclean: clean
