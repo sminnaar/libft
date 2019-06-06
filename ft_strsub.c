@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:10:50 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/31 15:15:46 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:04:35 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	{
 		nstr[i] = s[start + i];
 		++i;
+		nstr[i] = '\0';
 	}
-	nstr[i] = '\0';
 	return (nstr);
 }
