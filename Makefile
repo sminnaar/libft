@@ -6,11 +6,9 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/06/06 14:13:43 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/06 16:00:11 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-.PHONY: all, clean, fclean, re, del, c
 
 FLAG = -Wall -Wextra -Werror
 
@@ -118,8 +116,7 @@ del: fclean
 c:
 	@gcc -v $(FLAG) main.c libft.a
 
-so:
-	@gcc -shared -o libft.so $(OBJ)
+.PHONY: all, clean, fclean, re, del, c
 
 coffee:
 	@clear
