@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:33:43 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/06 10:28:43 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/10 11:05:27 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ int	main()
 	char *atoi = "-23412415rr";
 	char *atoi2 = "75782389";
 	char *atoi3 = "757igslkj82389";
+	char *strtrim = ft_strdup("     	 33Freatag   sgfsgf Hallo 	 	 ");
 	size_t max = ft_strlen(s1) + ft_strlen(s2 + 1);
 	
+	//ft_strtrim
+	ft_putstr(ft_strtrim(strtrim));
+
 	//ft_atoi Test
 	ft_putendl("1: ft_atoi test:");
 	ft_putchar('\n');
