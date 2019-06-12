@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:58:22 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/12 14:55:27 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/12 13:58:18 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/12 15:06:41 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t i;
-
-	i = 0;
-	if (!s)
-		return ;
-	while (*s != '\0')
+	if (alst != NULL && del != NULL)
 	{
-		*s = '\0';
-		s++;
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
 	}
 }
