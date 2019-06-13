@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/06/12 15:02:27 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/13 12:14:40 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ OBJ_DIR = objs/
 
 SRC =	ft_atoi.c \
 		ft_bzero.c \
-		ft_cntwrd.c \
 		ft_getchar.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -29,8 +28,6 @@ SRC =	ft_atoi.c \
 		ft_isupper.c \
 		ft_iswht.c \
 		ft_itoa.c \
-		ft_lstnew.c \
-		ft_lstdelone.c \
 		ft_memccpy.c \
 		ft_memalloc.c \
 		ft_memchr.c \
