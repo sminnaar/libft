@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:38:31 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/14 13:18:24 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/20 16:08:33 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/20 16:20:35 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nbr)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	if (nbr == -2147483648)
-		ft_putstr("-2147483648");
-	else if (nbr < 0)
+	t_list	*new;
+
+	if (!(new = (t_list *)ft_memalloc(sizeof(t_list) * 1)))
+		return (NULL);
+	if (content == NULL)
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 10)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		new->content = NULL;
+		new->content_size = 0;
 	}
 	else
-		ft_putchar(nbr + '0');
+	{
+		new->content = ft_memalloc(content_size);
+		if (new->content == NULL)
+			return (NULL);
+		ft_memmove(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

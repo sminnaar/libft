@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/06/13 12:14:40 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/06/20 17:17:24 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,12 @@ SRC =	ft_atoi.c \
 		ft_isupper.c \
 		ft_iswht.c \
 		ft_itoa.c \
+		ft_lstadd.c \
+		ft_lstnew.c \
+		ft_lstdel.c \
+		ft_lstdelone.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
 		ft_memccpy.c \
 		ft_memalloc.c \
 		ft_memchr.c \

@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:44:32 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/13 12:33:34 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/14 11:28:10 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/14 11:36:58 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	char *a;
+char	*ft_itoa2(int c);
 
-	a = b - 1;
-	while (len-- && a++)
-		*a = c;
-	return (b);
+int main(void)
+{
+	int r;
+	int r2;
+
+	r2 = -236789098;
+	r = 8293567;
+	ft_putnbr(r);
+	ft_putchar('\n');
+	ft_putendl(ft_itoa2(r));
+	ft_putnbr(r2);
+	ft_putchar('\n');
+	ft_putendl(ft_itoa2(r2));
+
+	
+	return (0);
 }

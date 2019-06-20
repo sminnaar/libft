@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:44:32 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/13 12:33:34 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/20 16:30:21 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/20 16:36:50 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char *a;
+	t_list	*holder;
+	t_list	*next;
 
-	a = b - 1;
-	while (len-- && a++)
-		*a = c;
-	return (b);
+	holder = *alst;
+	if (del != NULL)
+	{
+		while (holder != NULL)
+		{
+			next = holder->next;
+			del(holder->content, holder->content_size);
+			free(holder);
+			holder = next;
+		}
+		*alst = NULL;
+	}
 }
