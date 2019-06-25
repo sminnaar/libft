@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 11:28:10 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/14 11:36:58 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/25 15:19:24 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,15 @@ char	*ft_itoa2(int c);
 
 int main(void)
 {
-	int r;
-	int r2;
+	unsigned int i;
 
-	r2 = -236789098;
-	r = 8293567;
-	ft_putnbr(r);
-	ft_putchar('\n');
-	ft_putendl(ft_itoa2(r));
-	ft_putnbr(r2);
-	ft_putchar('\n');
-	ft_putendl(ft_itoa2(r2));
+	i = 1;
+	while (i < 1200)
+	{
+		ft_putnbr(i);
+		ft_putstr(", ");
+		i++;
+	}
 
-	
 	return (0);
 }
