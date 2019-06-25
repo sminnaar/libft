@@ -6,32 +6,34 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:38:03 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/05 14:47:03 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/06/25 16:50:37 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
-	int		out;
+	long	out;
 	int		p_n;
-	size_t	i;
+	long	i;
 
 	out = 0;
 	p_n = 1;
 	i = 0;
-	while (ft_iswht(nptr[i]))
+	while (ft_iswht(str[i]))
 		i++;
-	if (nptr[i] == 43 || nptr[i] == 45)
+	if (str[i] == 43 || str[i] == 45)
 	{
-		if (nptr[i] == 45)
+		if (str[i] == 45)
 			p_n = -1;
 		i++;
 	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
+	while (str && str[i] >= 48 && str[i] <= 57)
 	{
-		out = out * 10 + nptr[i] - 48;
+		if (out < 0)
+			return (0 - (p_n == 1));
+		out = (out * 10) + (str[i] - 48);
 		i++;
 	}
 	return ((int)(out * p_n));
