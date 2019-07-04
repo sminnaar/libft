@@ -6,7 +6,7 @@
 #    By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/19 15:17:25 by sminnaar          #+#    #+#              #
-#    Updated: 2019/07/04 14:58:09 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/07/04 15:06:45 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ INC_DIR = ./includes
 
 OBJ_DIR = objs/
 
-SRC =	ft_nl.c \
+SRC =	get_next_line.c \
+		ft_nl.c \
 		ft_dupdelstr.c \
 		ft_repnew.c \
 		ft_atoi.c \
