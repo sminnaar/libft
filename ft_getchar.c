@@ -6,13 +6,17 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:23:49 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/05/27 12:26:34 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/07/04 13:39:36 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_getchar(char c)
+char	ft_getchar(void)
 {
-	read(0, &c, 1);
+	char c;
+	if (read(0, &c, 1) != 1)
+		return (-1);
+	else
+		return (c);
 }

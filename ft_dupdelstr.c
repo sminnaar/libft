@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_dupdelstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 15:42:20 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/25 15:36:22 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/06/22 16:40:54 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/06/25 10:29:46 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int nbr, int fd)
+char	*ft_dupdelstr(char *s1)
 {
-	if (nbr == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (nbr < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-nbr, fd);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putchar_fd(nbr % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(nbr + '0', fd);
+	char *ret;
+
+	ret = ft_strdup(s1);
+	ft_strdel(&s1);
+	return (ret);
 }

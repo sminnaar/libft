@@ -6,7 +6,7 @@
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:23:30 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/21 15:05:44 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/05/31 15:11:23 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	{
 		nstr[i] = f(s[i]);
 		i++;
-		nstr[i] = '\0';
 	}
+	nstr[i] = '\0';
 	return (nstr);
 }

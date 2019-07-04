@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_getchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 15:42:20 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/25 15:36:22 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/07/04 13:38:18 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/07/04 13:38:44 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int nbr, int fd)
+char	ft_getchar_fd(const int fd)
 {
-	if (nbr == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (nbr < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-nbr, fd);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putchar_fd(nbr % 10 + '0', fd);
-	}
+	char c;
+	if (read(fd, &c, 1) != 1)
+		return (-1);
 	else
-		ft_putchar_fd(nbr + '0', fd);
+		return (c);
 }

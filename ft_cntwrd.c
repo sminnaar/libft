@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_cntwrd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 15:42:20 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/25 15:36:22 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/05/29 13:48:08 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/05/31 08:06:12 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int nbr, int fd)
+int	ft_cntwrd(const char *s, char c)
 {
-	if (nbr == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (nbr < 0)
+	size_t i;
+	size_t count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-nbr, fd);
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			count++;
+		while (s[i] && (s[i] != c))
+			i++;
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putchar_fd(nbr % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(nbr + '0', fd);
+	return (count);
 }

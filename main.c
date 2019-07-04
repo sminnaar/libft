@@ -5,26 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/14 11:28:10 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/25 15:19:24 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/07/04 12:10:02 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/07/04 13:42:09 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
+#include <fcntl.h>
 
-char	*ft_itoa2(int c);
-
-int main(void)
+int	main(void)
 {
-	unsigned int i;
+	char *s;
+	int fd;
 
-	i = 1;
-	while (i < 1200)
-	{
-		ft_putnbr(i);
-		ft_putstr(", ");
-		i++;
-	}
-
+	fd = open("New.txt", O_WRONLY);
+	s = ft_getstr_fd(fd);
+	write(fd, s, ft_strlen(s));
+	ft_putendl(s);
 	return (0);
 }
