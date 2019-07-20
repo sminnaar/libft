@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 12:10:02 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/07/12 12:37:15 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/07/17 15:40:10 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/07/17 16:05:53 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
-#include <fcntl.h>
 
-int	main(void)
+char	*ft_itoa_base(long int n, int base)
 {
-	char	*s;
-	char	*f;
-	int		r;
+	long int		nbr;
+	static size_t	i;
+	static char		*str;
 
-	f = "This is a test";
-	s = "This is a fest";
-	r = ft_strnequ(s, f, 12);
-	ft_putnbr(r);
-	return (0);
+	nbr = (long int)n;
+	i = 0;
+	str = ft_strnew(ft_intlen(nbr) + 1);
+	str[ft_intlen(nbr)] = '\0';
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		str[i] = '-';
+		i++;
+	}
+	if (nbr >= base)
+	{
+		free(str);
+		ft_itoa_base(nbr / base, base);
+	}
+	if (nbr % base > 9)
+		str[i++] = (char)((nbr % base) + 87);
+	else
+		str[i++] = (char)((nbr % base) + 48);
+	return (str);
 }
-	
-	
-	
-	
-	
-/*{
-	char *s;
-	int fd;
-
-	fd = open("New.txt", O_WRONLY);
-	s = ft_getstr_fd(fd);
-	write(fd, s, ft_strlen(s));
-	ft_putendl(s);
-	return (0);
-}*/

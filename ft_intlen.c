@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sminnaar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 13:29:23 by sminnaar          #+#    #+#             */
-/*   Updated: 2019/06/06 12:27:19 by sminnaar         ###   ########.fr       */
+/*   Created: 2019/07/17 15:50:22 by sminnaar          #+#    #+#             */
+/*   Updated: 2019/07/17 16:06:10 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+int	ft_intlen(long long int n)
 {
-	char	*s;
-	size_t	i;
-	size_t	j;
-
+	size_t i;
+	
 	i = 0;
-	j = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	if (!(s = (char*)ft_memalloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
-			return (NULL);
-	while (s1[i])
+	if (n < 0)
+		n *= -1;
+	if (n == 0)
+		return (1);
+	while (n > 0)
 	{
-		s[i] = s1[i];
+		n /= 10;
 		i++;
 	}
-	while (s2[j])
-	{
-		s[i + j] = s2[j];
-		j++;
-	}
-	s[i + j] = '\0';
-	return (s);
+	return (i);
 }
